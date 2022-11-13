@@ -42,7 +42,7 @@ if __name__ == "__main__":
     | .__/ \__,_|___/___/_|\_\_|_|_|\___|_|
     |_|  
     """
-    parser = argparse.ArgumentParser(prog=name, description="by BrainFoxx", epilog="Available commands: random, brute, passmaker")
+    parser = argparse.ArgumentParser(prog=name, description="The simple pass/list maker", epilog="Available commands: random, brute, passmaker | : - used as separation")
     parser.add_argument("--strings", "-S")
     parser.add_argument("--filename", "-F")
     parser.add_argument("--count", "-C")
@@ -51,7 +51,6 @@ if __name__ == "__main__":
     arguments = args
     if arguments.method == "random":
         print(random_choice(rang=int(arguments.c)))
-
     elif arguments.method == "brute":
         print(brute_force(rang=int(arguments.c)))
     elif arguments.method == "passmaker":
